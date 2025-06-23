@@ -53,5 +53,7 @@ APPLICATIONS - This tool has a wide array of real-world applications:
 
 ## OUTPUT -
 
+![Image](https://github.com/user-attachments/assets/feeb220f-f5b4-4649-98c4-15b112f0e005)
+
 
 
