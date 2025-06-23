@@ -51,4 +51,7 @@ APPLICATIONS - This tool has a wide array of real-world applications:
              - Educational Demonstration: A practical example of how cryptographic principles like AES-256 and key derivation are used in real systems.
              - Regulatory Compliance: Assists small businesses in meeting data protection requirements by offering file-level encryption.
 
-OUTPUT -
+## OUTPUT -
+
+
+![Image](https://github.com/user-attachments/assets/f12a5610-42bb-458c-a435-b61d2222bb22)
