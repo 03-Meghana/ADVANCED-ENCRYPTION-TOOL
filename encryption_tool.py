@@ -20,9 +20,9 @@ def encrypt_file(file_path: str, password: str) -> str:
 
     with open(file_path, 'rb') as file:
         data = file.read()
-    
+
     encrypted_data = fernet.encrypt(data)
-    
+
     encrypted_file_path = file_path + '.enc'
     with open(encrypted_file_path, 'wb') as file:
         file.write(salt + encrypted_data)
@@ -33,7 +33,7 @@ def decrypt_file(file_path: str, password: str) -> str:
     with open(file_path, 'rb') as file:
         salt = file.read(16)
         encrypted_data = file.read()
-    
+
     key = derive_key(password, salt)
     fernet = Fernet(key)
 
