@@ -16,16 +16,39 @@
 
 TASK NAME - Advanced Encryption Tool
 
-GOAL - The goal of this task is to develop a command-line based, modular penetration testing toolkit using Python. It is designed for cybersecurity enthusiasts and professionals to simulate and automate common reconnaissance and exploitation techniques in a controlled, ethical environment. This toolkit streamlines initial phases of penetration testing such as port scanning, brute force attacks, banner grabbing, vulnerability detection, and WHOIS lookups—each encapsulated within a dedicated module.
+GOAL - The primary goal of this project is to design and implement a secure, efficient, and easy-to-use file encryption and decryption utility. In an increasingly digital world, data confidentiality has become a fundamental requirement. This tool aims to provide users—regardless of their technical background—with a reliable means to protect sensitive files using robust cryptographic algorithms and a simplified graphical interface.
 
-OBJECTIVE - - Create a menu-driven interface for interacting with various pentesting modules - Implement lightweight and functional modules to perform tasks such as SSH brute-forcing and port scanning - Promote reusability and clarity through well-separated components - Emphasize basic automation of reconnaissance techniques and integrate external data sources like WHOIS services - Serve as an educational and practical foundation for future toolkit expansion
+OBJECTIVES - This project is centered around the following objectives:
+           - Implement AES-256 encryption, one of the most widely used and secure symmetric encryption standards available.
+           - Allow users to encrypt and decrypt files via a password-based key derivation mechanism to eliminate the need for manual key exchange.
+           - Provide a clean, interactive GUI that enables quick access to the encryption or decryption workflow.
+           - Include security practices such as salt generation and safe password storage to resist brute-force and dictionary attacks.
+           - Make the tool lightweight, portable, and easy to deploy across machines using executables.
+    The final result is a secure application that protects file content with cryptographic integrity while remaining approachable to users through an intuitive interface.
 
-PLATFORMS USED - - Development Environment: The toolkit was developed using Visual Studio Code, a versatile and extensible code editor that offers features like integrated terminal, and Git integration for efficient debugging and development. - Version Control & Collaboration: Source code and version history were managed using GitHub, providing a centralized platform for code backup, revision tracking, and optional open-source sharing. - Supported Operating Systems: While the toolkit is cross-platform, it was primarily tested on Windows, with compatibility for Linux and macOS as well. - Python Version: Developed and tested using Python 3.8+
+PLATFORMS USED - 
+           - Visual Studio Code (VS Code): The primary development environment where the tool was coded, tested, and debugged.
+           - GitHub: Used for version control and code hosting, enabling collaboration, backups, and issue tracking.
+           - Windows OS: The application and its GUI were optimized and tested for Windows environments. However, the core logic is OS-independent and can be adapted for                              cross-platform use.
 
-HOW IT WORKS - The user runs main.py, which presents a numbered menu corresponding to each tool: - Port Scanner: Uses Python's socket library to iterate through ports 1 to 1024 on a given IP address, reporting open ports. - SSH Brute Forcer: Reads from a user-provided password list to attempt logging into an SSH service using paramiko. It tests credentials until it finds a match or exhausts the list. - Banner Grabber: Connects to a specified port on a target machine (default 80), sends a request, and prints any service response banners—often useful in identifying software. - Vulnerability Checker (Basic): Checks for keywords related to commonly vulnerable technologies in a domain input. It suggests manual CVE lookup but can later be enhanced with API integration. - WHOIS Lookup: Retrieves domain registration info such as registrar, expiration date, and contact details using the whois library.
+TOOLS & TECHNOLOGIES - 
+           - Python: Core programming language for both the encryption backend and GUI.
+           - cryptography Library: Utilized for its high-level abstraction of AES encryption and Fernet key management.
+           - PBKDF2HMAC: A password-based key derivation function used to generate secure encryption keys with added salt.
+           - base64 & os modules: For secure encoding and random salt generation.
+           - Tkinter: Python’s standard GUI library to create a lightweight and simple graphical user interface.
+          
+KEY FEATURES - 
+           - AES-256 File Encryption/Decryption: Securely converts files into unreadable formats and reverses the process with a valid password.
+           - Salted Key Derivation: Ensures that every encryption cycle is unique, even if the same password is reused.
+           - Simple Drag-and-Drop Interface: Users can easily select files and interact via clearly labeled buttons.
+           - Error Handling: Notifies users about incorrect passwords, tampered files, or unsupported formats.
+           - File Name Tagging: Encrypted files get a .enc suffix and decrypted files get .dec, making it easy to identify file status.
 
-TOOLS & LIBRARIES - The toolkit is built using Python due to its readability, platform independence, and extensive third-party support. Libraries may include: - socket: For low-level TCP port communication and banner grabbing - paramiko: To attempt SSH connections using password-based brute force - requests: For HTTP-based tasks (planned for future modules) - whois: To perform domain lookup and fetch WHOIS records - argparse, input() and print(): For user interaction via CLI - Custom wordlists and external files: Used in brute-force operations
-
-APPLICATIONS - - Cybersecurity Education: Demonstrates basic pentest workflows for students and self-learners. - Ethical Hacking Practice: A safe platform to simulate and practice reconnaissance tasks. - CTF Training: Useful for introductory CTF challenges involving brute force, port discovery, and OSINT. - Automation Base: Provides a Python framework for integrating more advanced tools like CVE scanning, DNS fuzzing, or packet sniffing in the future. - Portfolio Project: Showcases Python development, modular architecture, and cybersecurity knowledge in practical form.
+APPLICATIONS - This tool has a wide array of real-world applications:
+             - Secure Personal Storage: Users can encrypt private photos, documents, or financial records.
+             - Data Transmission: Safely encrypt files before emailing or uploading them to the cloud.
+             - Educational Demonstration: A practical example of how cryptographic principles like AES-256 and key derivation are used in real systems.
+             - Regulatory Compliance: Assists small businesses in meeting data protection requirements by offering file-level encryption.
 
 OUTPUT -
